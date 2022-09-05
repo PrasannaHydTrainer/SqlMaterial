@@ -1,0 +1,119 @@
+Mongodb is a cross-platform document oriented database, which provides
+
+	high performance
+
+	High Availability
+
+	and easy scalability 
+
+	
+The Database we call as database
+
+Table in RDBMS as Collection 
+
+Tuple/Row we call as Document
+
+Column we call as Field
+
+Table Join w.r.t. Embedded documents
+
+Primary will be provided automatically in Mongodb
+
+show dbs -> Displays all databases 
+
+to create or move to database give the command as
+
+use practice
+
+to see the current database give the command as
+
+db
+
+Create collection and add data 
+
+db.emp.insert({"empno":1,"name":"Prasanna","basic":58844});
+
+
+To see the list of collections, please give the command as
+
+show collections
+
+To see the list of documents, give the command as
+
+db.emp.find()
+
+
+db.emp.insert([
+ {
+     empno:2,
+     name:"Subhadeep",
+     basic:88234
+ },
+ {
+    empno:3,
+    name:"Hari Srinivas",
+    basic:88299
+ }
+ ,
+ {
+   empno:4,
+   name:"Vanaja",
+   basic:78983
+ }
+ ])
+
+__________________________________________________________________________________________
+
+Create Employ table 
+
+ db.employ.insert([
+ {
+    empno:1,
+    name:"Subhadeep",
+    dept:"Java",
+    desig:"Programmer",
+    basic:82234
+ },
+ {
+   empno:2,
+   name:"Vanaja",
+   dept:"Sql",
+   desig:"Manager",
+   basic:88111
+ },
+ {
+   empno:3,
+   name:"Hari Srinivas",
+   dept:"Java",
+   desig:"Programmer",
+   basic:79888
+ },
+ {
+   empno:4,
+   name:"Bhushan",
+   dept:"Angular",
+   desig:"TeamLead",
+   basic:79888
+ },
+ {
+   empno:5,
+   name:"Akash",
+   dept:"Sql",
+   desig:"TeamLead",
+   basic:88112
+ }
+ ])
+
+
+Where clause examples 
+
+db.employ.find({"empno":1}).pretty() -> equals
+
+db.employ.find({"basic":{$lt:80000}}).pretty();
+
+db.employ.find({"basic":{$gt:80000}}).pretty();
+
+db.employ.find({"name":{$in:["Bhushan","Akash","Vanaja"]}}).pretty();
+
+db.employ.find({"name":{$nin:["Bhushan","Akash","Vanaja"]}}).pretty();
+
