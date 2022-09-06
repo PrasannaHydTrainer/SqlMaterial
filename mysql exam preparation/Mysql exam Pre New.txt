@@ -1,0 +1,130 @@
+1) What is the definition of first normal form 
+
+A table said to be in 1NF, when each cell contains precisely one value (Atomic Values). 
+
+2) What is the definition of second normal form 
+
+A table said to be in 1NF, every attribute functionally depend on whole key but not part of the key (functional dependency) 
+
+3) What is the definition of third normal form 
+
+A table said to be in 2NF, every attribute needs to depend on whole key but not transitively (Transitive Dependency) 
+
+4) Which keyword allows you to remove duplicate entries at the time of display
+
+DISTINCT
+
+5) what would be output of 
+
+   select count(comm) from Emp
+
+Display count of rows for which comm column is not null. 
+
+Means how many not null rows avaialble for comm column will be displayed. 
+
+6) What would be output for 
+
+select Empno, Ename, job, sal from emp having basic > 2000;
+
+-- query is wrong, we need to use WHERE clause here instead of HAVING
+
+7) What is the difference between WHERE and HAVING clauses 
+
+WHERE clause used to filter records based on table fields, where
+HAVING clause used to filter records based on aggregate fields. 
+
+Having always expects aggregate condition.
+
+8) What is the output for the given query. 
+
+select Job,Count(*) from Emp
+group by Job;
+
+-- Displays no.of employees are working in each dept (job) 
+
+9) What is the output for the given query 
+
+select job,count(*) from emp 
+group by job
+where job in('CLERK','MANAGER','SALESMAN');
+
+-- Query returns an error, as WHERE clause always before group by 
+
+The correct query is 
+
+select job,count(*) from emp 
+where job in('CLERK','MANAGER','SALESMAN');
+group by job
+
+
+10) What would be output for the below query
+
+select Job,Count(*) from Emp
+group by Job
+having count(*) > 1;
+
+-- Displays no.of employees are working in each dept (job), as which dept (job) 
+contains more than 1 employ
+
+11) What is the output for the below query 
+
+select Job,Count(*) from Emp
+order by job
+group by Job
+having count(*) > 1;
+
+-- The query throws error, as Order By Clause always comes at end, correct query is 
+
+select Job,Count(*) from Emp
+group by Job
+having count(*) > 1
+order by job;
+
+-- Priority Order 
+
+Where -> Group By -> Having -> order By 
+
+12) What would be output for the given query 
+
+select Empno,Ename,job,sal from emp
+order by 4;
+
+
+13) Can you join a table with itself 
+
+Yes (self join)
+
+14) Which join generates cartician product to table records 
+
+Cross Join
+
+15) 
+
+Create table EmpTest
+(
+   Empno INT ,
+   Name varchar(30),
+   Sal numeric(9,2)
+)
+
+For the above table, rewrite by adding primary key on Empno field. 
+
+Create table EmpTest
+(
+   Empno INT ,
+   Name varchar(30),
+   Sal numeric(9,2),  
+   primary key(empno)
+)
+
+
+16) What is meant by Referencial Integrity 
+
+Values of the foreign key needs to match with corresponding primary key values
+
+17) What is the difference between Inner join and OUTER Join 
+
+Inner join displays only matching records, where outer join displays matching/unmatching records
+
+18) If a subquery returns more than one value, we can handle them by using 
+
