@@ -1,0 +1,85 @@
+DataStructures and Program Foundation comes from PPT
+Networking and OS -> PPT
+Agile -> PPT + My Questions and Notes 
+MongoDb -> Practical questions plus PPT 
+MySql -> PPT + Syntaxes + Pratical Most + Queries and Output or scenario and identify correct queries. (25) 
+
+MySql 
+______
+
+   -> What is the basic rule for 1NF  (Atomic Values)
+
+   -> Second Normal Form (Functional Dependency)
+
+   -> Third Normal Form (Transitive Dependency)
+
+
+
+Any key that which uniquely identifies rows of a table made up of more than one attribute called 
+
+Composite Key/Super Key
+
+What are the attributes of Primary Key 
+
+ -> Cannot Be NULL
+
+ -> No Duplicate Values
+
+ -> Clustered Index
+
+A table contains only one primary key T/F 
+
+True
+
+Primary key can be made on more than one field (True) 
+
+Foreign key needs to match with corresponding parent table field(s) known as 
+
+Referential Integrity 
+
+ACID Principles
+
+Atomocity
+
+Consistency
+
+Isolation
+
+Durability 
+
+Atomicity : This state ensures that either all the data modifications are perfomed or none of them are performed. 
+
+Consistency : This is a state in which all data is in a consistency state after a transaction is completed successfully.
+
+Isolation : This states that any data modification made by concurrent transactions must be isolated from the modifications made by other concurrent transactions.  There is no scope for the transaction to seee an intermediate state. 
+
+Durability : This states that any change in data by a completed transaction remains permanent in the system. Therefore, any change in data due to a completed transaction persists even in the event of system failure. 
+
+
+Syntaxes you need to focus is
+
+Alter command syntax mandetory 2 questions. 
+
+Identify the correct syntax for adding new field to the table 
+
+alter table table_name add field datatype
+
+Identify correct systnax to add primary key
+
+alter table table_name add primary Key(field)
+
+Identify the correct syntax for adding foreign key 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
