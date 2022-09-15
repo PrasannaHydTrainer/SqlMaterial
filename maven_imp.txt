@@ -1,0 +1,29 @@
+Maven is a build tool, that which allows you to create any java project as console or windows or framework based. 
+
+If you want to overcome the problem of adding jar files to the given project, then we need the help of maven. 
+
+Instead of adding jar files, we need to add the dependencies to the given project. 
+
+how to create a maven project 
+
+mvn archetype:generate -DgroupId=com.hexaware.trainer -DartifactId=MavenDemo -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+
+Once you make a maven project, we have 2 sections avaialble as
+
+main
+test
+
+main contains the actual business logic
+test contains the relevant test cases available. 
+
+to compile the maven project, 
+
+given the command as
+
+mvn compile
+
+to execute any java program
+
+mvn exec:java -Dexec.mainClass=com.hexaware.trainer.App
+
+
