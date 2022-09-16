@@ -26,4 +26,27 @@ to execute any java program
 
 mvn exec:java -Dexec.mainClass=com.hexaware.trainer.App
 
+maven resources will be available in repositories. 
+
+There are various repositories as
+
+
+1) Local Repository : Once you create any maven project, all repositories will be stored in local repository called c:\users\user_name\.m2 folder 
+
+
+
+2) Central Repository
+
+3) Remote Repostitory 
+
+
+How the way the maven project gets executed ???
+
+
+First you run the maven project, first it scans all the content of the pom.xml (project Object Model) 
+
+then it checks for all dependencies from local repository first, if it is avaiable in local repo, fine, else it 
+
+will switch to central repository "maven-archetype-quickstart", this is software available in your system. If 
+it is not available then it checks in remote repository (website) 
 
